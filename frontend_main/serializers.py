@@ -1,14 +1,14 @@
 from .models import Post, Category
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from rest_framework import serializers
 
 
-class UserSerializer(serializers.ModelSerializer):
-    posts = serializers.PrimaryKeyRelatedField(many=True, queryset=Post.objects.all())
-
-    class Meta:
-        model = User
-        fields = ('id', 'username', 'posts')
+# class UserSerializer(serializers.ModelSerializer):
+#     posts = serializers.PrimaryKeyRelatedField(many=True, queryset=Post.objects.all())
+#
+#     class Meta:
+#         model = User
+#         fields = ('id', 'username', 'posts')
 
 
 class PostSerializer(serializers.ModelSerializer):

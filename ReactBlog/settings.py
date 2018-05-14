@@ -82,14 +82,13 @@ WSGI_APPLICATION = 'ReactBlog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ReactDB',
+        'NAME': 'RESTBlog',
         'USER': 'postgres',
         'PASSWORD': 'random2000',
         'HOST': 'localhost',
         'PORT': '5433',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

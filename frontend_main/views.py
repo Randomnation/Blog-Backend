@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import Http404
 from django.contrib.auth.models import User
 from .models import Post, Category
-from .serializers import PostSerializer, CategorySerializer, UserSerializer
+from .serializers import PostSerializer, CategorySerializer
+# from .serializers import UserSerializer
 from frontend_main.permissions import IsOwnerOrReadOnly
 from rest_framework import permissions
 from rest_framework import status, generics
@@ -10,14 +11,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 
-class UserList(generics.ListAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
-
-class UserDetail(generics.RetrieveAPIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+# class UserList(generics.ListAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
+#
+#
+# class UserDetail(generics.RetrieveAPIView):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
 
 
 class PostList(APIView):

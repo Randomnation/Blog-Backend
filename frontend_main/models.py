@@ -16,8 +16,7 @@ class Category(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=200)
     categories = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
-    text = models.TextField(max_length=500)
-    owner = models.ForeignKey('auth.User', related_name='posts', on_delete=models.CASCADE, null=True)
+    text = models.TextField(max_length=15000)
     created_date = models.DateTimeField(auto_now=True)
     modified_date = models.DateTimeField(auto_now=True, blank=True, null=True)
 
